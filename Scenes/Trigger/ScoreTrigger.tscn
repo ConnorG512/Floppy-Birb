@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw3mqhc1u4st0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ws265"]
+
+[node name="ScoreTrigger" type="Node2D"]
+
+[node name="Trigger" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger"]
+shape = SubResource("RectangleShape2D_ws265")
