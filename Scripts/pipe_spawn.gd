@@ -3,7 +3,7 @@ extends CharacterBody2D
 var movespeed = -400
 
 func _ready():
-	pass # Replace with function body.
+	pass
 
 func _physics_process(delta):
 	generate_speed()
@@ -19,6 +19,5 @@ func move_accross_screen():
 	velocity.x = movespeed 
 	move_and_slide()
 
-func spawn_pipe():
+func kill_pipe():
 	pass
-

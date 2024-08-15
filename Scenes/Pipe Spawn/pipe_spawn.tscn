@@ -26,3 +26,6 @@ texture = ExtResource("1_ljqt8")
 [node name="ScoreTrigger" parent="." instance=ExtResource("3_cdps4")]
 position = Vector2(143, 625)
 scale = Vector2(4.36, 48.72)
+
+[node name="PipeSpawnTimer" type="Timer" parent="."]
+wait_time = 3.0
