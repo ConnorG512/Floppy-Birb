@@ -19,10 +19,10 @@ func _process(delta):
 	pass
 
 func _physics_process(delta):
-	character_movement(character_speed)
+	character_movement()
 	pass
 
-func character_movement(character_speed):
+func character_movement():
 	
 	if is_dead == true:
 		return
