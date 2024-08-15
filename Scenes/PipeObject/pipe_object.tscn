@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0syu5vi6dyye"]
+[gd_scene load_steps=4 format=3 uid="uid://b0syu5vi6dyye"]
 
+[ext_resource type="Script" path="res://Scripts/pipe_object.gd" id="1_k5n2u"]
 [ext_resource type="Texture2D" uid="uid://cns1oaqotddcp" path="res://Sprites/pipe_top.png" id="1_mma6y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6cnv3"]
 size = Vector2(30, 32)
 
 [node name="PipeObject" type="Node2D"]
+script = ExtResource("1_k5n2u")
 
 [node name="PipeTexture" type="Sprite2D" parent="."]
 texture = ExtResource("1_mma6y")
