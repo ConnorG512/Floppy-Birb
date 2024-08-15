@@ -31,10 +31,15 @@ func character_movement():
 		move_and_slide()
 		
 		if Input.is_action_just_pressed("pull_up") and can_jump == true:
-			velocity.y = -character_speed * 20
+			velocity.y = -character_speed * 25
 			move_and_slide()
 			JumpTimer.start()
+			can_jump = false
 
 func jump_timer_end():
-	can_jump = false
 	can_jump = true
+
+func player_die():
+	velocity.y = 0
+	move_and_slide()
+	can_jump = false
