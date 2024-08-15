@@ -41,6 +41,5 @@ func jump_timer_end():
 	can_jump = true
 
 func player_die():
-	velocity.y = 0
-	move_and_slide()
-	can_jump = false
+	print("Player Died!")
+	queue_free()
