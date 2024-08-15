@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -10,6 +10,7 @@ func _ready():
 func _process(delta):
 	pass
 
-# Global singal emitted from signal_event_bus when the player hits the trigger.
-func player_entered_pipe(body):
-	
+
+
+func player_entered_area(body_rid, body, body_shape_index, local_shape_index):
+	SignalEventBus.emit_signal("player_hit_death_trigger")
