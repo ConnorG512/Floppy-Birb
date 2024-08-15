@@ -16,6 +16,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+SignalEventBus="*res://Scripts/Autoload/signal_event_bus.gd"
 PlayerStats="*res://Scripts/Autoload/player_stats.gd"
 
 [dotnet]
