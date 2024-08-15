@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bw3mqhc1u4st0"]
+[gd_scene load_steps=3 format=3 uid="uid://bw3mqhc1u4st0"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ws265"]
+[ext_resource type="Script" path="res://Scripts/ScoreTrigger.gd" id="1_jxcfg"]
 
-[node name="ScoreTrigger" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_scw4i"]
 
-[node name="Trigger" type="Area2D" parent="."]
+[node name="ScoreTrigger" type="Area2D"]
+script = ExtResource("1_jxcfg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger"]
-shape = SubResource("RectangleShape2D_ws265")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_scw4i")
+
+[connection signal="body_entered" from="." to="." method="score_trigger_entered"]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dawo2j7pshaw7"]
+[gd_scene load_steps=6 format=3 uid="uid://dawo2j7pshaw7"]
 
 [ext_resource type="PackedScene" uid="uid://c2t6pc43xet6t" path="res://Scenes/Character/character.tscn" id="1_ro56v"]
 [ext_resource type="Texture2D" uid="uid://ba25bonvw8v6n" path="res://Sprites/grass_top.png" id="3_phlpv"]
 [ext_resource type="PackedScene" uid="uid://c3f8ecy2l3ldo" path="res://Scenes/Trigger/DeathTrigger.tscn" id="3_xcsa8"]
 [ext_resource type="PackedScene" uid="uid://bq8bpuqmdpr5n" path="res://Scenes/Pipe Spawn/pipe_spawn.tscn" id="4_v6hju"]
+[ext_resource type="PackedScene" uid="uid://bw3mqhc1u4st0" path="res://Scenes/Trigger/ScoreTrigger.tscn" id="5_hj7p8"]
 
 [node name="Level" type="Node2D"]
 
@@ -23,3 +24,7 @@ position = Vector2(359, 1234)
 scale = Vector2(28.1771, -1.01678)
 
 [node name="PipeSpawn" parent="." instance=ExtResource("4_v6hju")]
+
+[node name="ScoreTrigger" parent="." instance=ExtResource("5_hj7p8")]
+position = Vector2(145, 522)
+scale = Vector2(14.4, 4.48)

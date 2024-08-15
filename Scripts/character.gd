@@ -14,6 +14,7 @@ var current_score = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	SignalEventBus.player_hit_death_trigger.connect(player_die)
+	SignalEventBus.game_score_updated.connect(update_score)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -43,3 +44,8 @@ func jump_timer_end():
 func player_die():
 	print("Player Died!")
 	queue_free()
+
+func update_score():
+	current_score += 1
+	print(current_score)
+
