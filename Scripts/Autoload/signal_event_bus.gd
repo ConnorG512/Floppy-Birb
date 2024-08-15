@@ -1,5 +1,8 @@
 extends Node
 
+signal player_died()
+signal update_game_score_ui()
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
