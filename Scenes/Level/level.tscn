@@ -9,4 +9,4 @@
 position = Vector2(80, 631)
 
 [node name="PipeObject" parent="." instance=ExtResource("2_fmrto")]
-position = Vector2(88, 1058)
+position = Vector2(89, 1212)
