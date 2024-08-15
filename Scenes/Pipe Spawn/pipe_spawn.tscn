@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bq8bpuqmdpr5n"]
+
+[ext_resource type="Texture2D" uid="uid://cns1oaqotddcp" path="res://Sprites/pipe_top.png" id="1_ljqt8"]
+[ext_resource type="PackedScene" uid="uid://c3f8ecy2l3ldo" path="res://Scenes/Trigger/DeathTrigger.tscn" id="2_i6bqq"]
+
+[node name="PipeSpawn" type="Node2D"]
+
+[node name="PipeTop" type="Sprite2D" parent="."]
+position = Vector2(144, 1130)
+scale = Vector2(5.34369, 5.34369)
+texture = ExtResource("1_ljqt8")
+
+[node name="Collision" parent="PipeTop" instance=ExtResource("2_i6bqq")]
+
+[node name="PipeTop2" type="Sprite2D" parent="."]
+position = Vector2(144, 84.9999)
+rotation = -3.14159
+scale = Vector2(5.34369, 5.34369)
+texture = ExtResource("1_ljqt8")
+
+[node name="Collision" parent="PipeTop2" instance=ExtResource("2_i6bqq")]
