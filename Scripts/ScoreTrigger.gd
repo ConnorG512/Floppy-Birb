@@ -5,6 +5,6 @@ var can_be_triggered = true
 
 func score_trigger_entered(body):
 	if can_be_triggered == true:
-		SignalEventBus.emit_signal("game_score_updated")
+		SignalEventBus.emit_signal("game_score_updated", score_amount)
 		can_be_triggered = false
 	

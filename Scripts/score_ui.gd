@@ -1,17 +1,12 @@
 extends Control
 
-@onready var ScoreText = $ScoreText
+@onready var score_label = $ScoreLabel
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	SignalEventBus.game_score_updated.connect(update_score)
+	SignalEventBus.game_score_ui_update.connect(update_score)
 	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func update_score(current_score):
-	ScoreText.clear()
-	ScoreText.add_text(current_score.ToString())
+	score_label.clear()
+	score_label.add_text(str(current_score))

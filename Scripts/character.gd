@@ -45,7 +45,8 @@ func player_die():
 	print("Player Died!")
 	queue_free()
 
-func update_score():
-	current_score += 1
+func update_score(scoreToAdd):
+	current_score += scoreToAdd
+	SignalEventBus.emit_signal("game_score_ui_update", current_score)
 	print(current_score)
 
