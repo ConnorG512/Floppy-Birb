@@ -14,6 +14,10 @@ config/name="Floppy Birb"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerStats="*res://Scripts/Autoload/player_stats.gd"
+
 [dotnet]
 
 project/assembly_name="Floppy Birb"
