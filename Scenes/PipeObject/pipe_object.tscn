@@ -17,3 +17,5 @@ texture = ExtResource("1_mma6y")
 
 [node name="CollisionShape" type="CollisionShape2D" parent="PipeTexture/Collision"]
 shape = SubResource("RectangleShape2D_6cnv3")
+
+[connection signal="body_entered" from="PipeTexture/Collision" to="." method="player_entered_pipe"]

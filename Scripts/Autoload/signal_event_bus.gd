@@ -1,6 +1,6 @@
 extends Node
 
-signal player_died()
+signal player_hit_death_trigger()
 signal update_game_score_ui()
 
 # Called when the node enters the scene tree for the first time.
