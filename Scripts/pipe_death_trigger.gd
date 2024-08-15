@@ -11,6 +11,5 @@ func _process(delta):
 	pass
 
 func on_pipe_entered(body):
-	print("Pipe entered!" + body.to_string())
 	body.queue_free()
 	SignalEventBus.emit_signal("pipes_destroyed_off_screen")

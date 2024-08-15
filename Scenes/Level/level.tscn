@@ -38,15 +38,15 @@ z_index = -1
 position = Vector2(360, 640)
 texture = ExtResource("5_37c7r")
 
+[node name="PipeDeathTrigger" parent="." instance=ExtResource("7_ju8yx")]
+position = Vector2(-450, 642)
+scale = Vector2(-19.9735, 75.2111)
+
+[node name="PipeSpawnManager" parent="." instance=ExtResource("8_yqxmc")]
+
 [node name="ScoreUI" parent="." instance=ExtResource("6_lugbc")]
 anchors_preset = 10
 anchor_bottom = 0.0
 offset_left = 360.0
 offset_right = 360.0
 grow_vertical = 1
-
-[node name="PipeDeathTrigger" parent="." instance=ExtResource("7_ju8yx")]
-position = Vector2(-450, 642)
-scale = Vector2(-19.9735, 75.2111)
-
-[node name="PipeSpawnManager" parent="." instance=ExtResource("8_yqxmc")]
