@@ -24,6 +24,10 @@ region_rect = Rect2(0, 0, 360, 32)
 position = Vector2(359, 1234)
 scale = Vector2(28.1771, -1.01678)
 
+[node name="Collision2" parent="." instance=ExtResource("3_xcsa8")]
+position = Vector2(359, 5)
+scale = Vector2(28.1771, -1.01678)
+
 [node name="PipeSpawn" parent="." instance=ExtResource("4_v6hju")]
 position = Vector2(716, 0)
 scale = Vector2(1.00433, 1)
