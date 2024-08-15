@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dawo2j7pshaw7"]
+[gd_scene load_steps=9 format=3 uid="uid://dawo2j7pshaw7"]
 
 [ext_resource type="Script" path="res://Scripts/level.gd" id="1_kfnmk"]
 [ext_resource type="PackedScene" uid="uid://c2t6pc43xet6t" path="res://Scenes/Character/character.tscn" id="1_ro56v"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://c3f8ecy2l3ldo" path="res://Scenes/Trigger/DeathTrigger.tscn" id="3_xcsa8"]
 [ext_resource type="Texture2D" uid="uid://dclgceefgnj5o" path="res://Sprites/background_1.png" id="5_37c7r"]
 [ext_resource type="PackedScene" uid="uid://mdxuai4o0prx" path="res://Scenes/UI/score_ui.tscn" id="6_lugbc"]
+[ext_resource type="PackedScene" uid="uid://dipvqvqtrybbg" path="res://Scenes/Trigger/pipe_death_trigger.tscn" id="7_ju8yx"]
+[ext_resource type="PackedScene" uid="uid://dlkbvgh0r3nnt" path="res://Scenes/pipe_spawn_manager/pipe_spawn_manager.tscn" id="8_yqxmc"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_kfnmk")
@@ -42,3 +44,9 @@ anchor_bottom = 0.0
 offset_left = 360.0
 offset_right = 360.0
 grow_vertical = 1
+
+[node name="PipeDeathTrigger" parent="." instance=ExtResource("7_ju8yx")]
+position = Vector2(-450, 642)
+scale = Vector2(-19.9735, 75.2111)
+
+[node name="PipeSpawnManager" parent="." instance=ExtResource("8_yqxmc")]
