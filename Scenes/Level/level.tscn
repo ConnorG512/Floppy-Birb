@@ -10,10 +10,12 @@
 position = Vector2(96, 631)
 
 [node name="PipeObject" parent="." instance=ExtResource("2_fmrto")]
-position = Vector2(104, 839)
+position = Vector2(116, 1149)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="GrassTop" type="Sprite2D" parent="."]
 texture_repeat = 2
-position = Vector2(360, 1233)
-scale = Vector2(22.6875, 3)
+position = Vector2(360, 1248)
+scale = Vector2(2, 2)
 texture = ExtResource("3_phlpv")
+region_enabled = true
+region_rect = Rect2(0, 0, 360, 32)
