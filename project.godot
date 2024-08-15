@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 SignalEventBus="*res://Scripts/Autoload/signal_event_bus.gd"
 PlayerStats="*res://Scripts/Autoload/player_stats.gd"
 
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
+
 [dotnet]
 
 project/assembly_name="Floppy Birb"

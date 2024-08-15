@@ -7,6 +7,7 @@
 size = Vector2(30, 32)
 
 [node name="PipeObject" type="Node2D"]
+scale = Vector2(4.16611, 4.16611)
 script = ExtResource("1_k5n2u")
 
 [node name="PipeTexture" type="Sprite2D" parent="."]
