@@ -28,3 +28,7 @@ sprite_frames = SubResource("SpriteFrames_omxr2")
 shape = SubResource("CircleShape2D_8jueh")
 
 [node name="JumpTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[connection signal="timeout" from="JumpTimer" to="." method="jump_timer_timeout"]
