@@ -5,7 +5,7 @@ var CharacterBody = CharacterBody2D
 
 @onready var JumpTimer = $JumpTimer
 
-@export var character_speed = 450
+@export var character_speed = 300 
 
 var is_dead = false
 var can_jump = true
@@ -30,6 +30,11 @@ func character_movement():
 		velocity.y = character_speed
 		move_and_slide()
 		
-		if Input.is_action_pressed("pull_up"):
-			velocity.y = -character_speed * 2.5
+		if Input.is_action_just_pressed("pull_up") and can_jump == true:
+			velocity.y = -character_speed * 20
 			move_and_slide()
+			JumpTimer.start()
+
+func jump_timer_end():
+	can_jump = false
+	can_jump = true
