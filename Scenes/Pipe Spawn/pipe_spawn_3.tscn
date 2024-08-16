@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://bh11wcwibalf0"]
+[gd_scene load_steps=7 format=3 uid="uid://bh11wcwibalf0"]
 
 [ext_resource type="Script" path="res://Scripts/pipe_spawn.gd" id="1_kjvn6"]
 [ext_resource type="Texture2D" uid="uid://cns1oaqotddcp" path="res://Sprites/pipe_top.png" id="2_gn4xm"]
 [ext_resource type="Texture2D" uid="uid://6q3725pa0bef" path="res://Sprites/pipe_bottom.png" id="3_lepc5"]
 [ext_resource type="PackedScene" uid="uid://c3f8ecy2l3ldo" path="res://Scenes/Trigger/DeathTrigger.tscn" id="4_t4tr2"]
 [ext_resource type="PackedScene" uid="uid://bw3mqhc1u4st0" path="res://Scenes/Trigger/ScoreTrigger.tscn" id="5_0e8mi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l05oi"]
+size = Vector2(69, 1216)
 
 [node name="PipeSpawn" type="CharacterBody2D"]
 script = ExtResource("1_kjvn6")
@@ -45,3 +48,11 @@ scale = Vector2(1, 2.032)
 [node name="ScoreTrigger" parent="." instance=ExtResource("5_0e8mi")]
 position = Vector2(143, 625)
 scale = Vector2(4.36, 48.72)
+
+[node name="PipeDeathCollision" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PipeDeathCollision"]
+position = Vector2(260.5, 607)
+shape = SubResource("RectangleShape2D_l05oi")

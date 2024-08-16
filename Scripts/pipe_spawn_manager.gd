@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var spawn_timer = $Timer
+var can_spawn_pipe = true
 
 func timer_change_wait_time():
 	var spawn_time = randf_range(0.5, 3.0)
@@ -35,10 +36,11 @@ func pipe_spawn_rng():
 func place_pipe_in_world(pipe_spawn_instance):
 	var pipe_spawn_pos = Vector2(720,0)
 	pipe_spawn_instance.position = pipe_spawn_pos
-	add_child(pipe_spawn_instance)
+	call_deferred("add_child", pipe_spawn_instance)
 	timer_change_wait_time()
 	spawn_timer.start()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	SignalEventBus.pipes_destroyed_off_screen.connect(pipe_spawn_rng)
 	pipe_spawn_rng()
