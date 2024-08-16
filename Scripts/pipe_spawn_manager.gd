@@ -10,7 +10,7 @@ func pipe_spawn_rng():
 	var pipe_spawn
 	var pipe_spawn_instance
 	
-	var pipe_spawn_num = randi_range(0,1)
+	var pipe_spawn_num = randi_range(0,3)
 	
 	match pipe_spawn_num:
 		0:
@@ -21,8 +21,16 @@ func pipe_spawn_rng():
 			pipe_spawn = preload("res://Scenes/Pipe Spawn/pipe_spawn_2.tscn")
 			pipe_spawn_instance = pipe_spawn.instantiate()
 			place_pipe_in_world(pipe_spawn_instance)
+		2:
+			pipe_spawn = preload("res://Scenes/Pipe Spawn/pipe_spawn_3.tscn")
+			pipe_spawn_instance = pipe_spawn.instantiate()
+			place_pipe_in_world(pipe_spawn_instance)
+		3:
+			pipe_spawn = preload("res://Scenes/Pipe Spawn/pipe_spawn_4.tscn")
+			pipe_spawn_instance = pipe_spawn.instantiate()
+			place_pipe_in_world(pipe_spawn_instance)
 		_:
-			print("Invalid number")
+			print("Invalid spawnrange number in spawn manger!")
 
 func place_pipe_in_world(pipe_spawn_instance):
 	var pipe_spawn_pos = Vector2(720,0)
