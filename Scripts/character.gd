@@ -48,4 +48,3 @@ func player_die():
 func update_score(scoreToAdd):
 	current_score += scoreToAdd
 	SignalEventBus.emit_signal("game_score_ui_update", current_score)
-
