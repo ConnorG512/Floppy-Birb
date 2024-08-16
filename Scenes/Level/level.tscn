@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dawo2j7pshaw7"]
+[gd_scene load_steps=10 format=3 uid="uid://dawo2j7pshaw7"]
 
 [ext_resource type="Script" path="res://Scripts/level.gd" id="1_kfnmk"]
 [ext_resource type="PackedScene" uid="uid://c2t6pc43xet6t" path="res://Scenes/Character/character.tscn" id="1_ro56v"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://mdxuai4o0prx" path="res://Scenes/UI/score_ui.tscn" id="6_lugbc"]
 [ext_resource type="PackedScene" uid="uid://dipvqvqtrybbg" path="res://Scenes/Trigger/pipe_death_trigger.tscn" id="7_ju8yx"]
 [ext_resource type="PackedScene" uid="uid://dlkbvgh0r3nnt" path="res://Scenes/pipe_spawn_manager/pipe_spawn_manager.tscn" id="8_yqxmc"]
+[ext_resource type="Texture2D" uid="uid://ge6xlnox75rv" path="res://Sprites/grass_blades.png" id="9_axke3"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_kfnmk")
@@ -50,3 +51,10 @@ anchor_bottom = 0.0
 offset_left = 360.0
 offset_right = 360.0
 grow_vertical = 1
+
+[node name="GrassBlades" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(360, 1203)
+texture = ExtResource("9_axke3")
+region_enabled = true
+region_rect = Rect2(0.104, 0.012, 720, 32.035)
