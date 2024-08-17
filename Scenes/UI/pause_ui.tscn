@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmfsnbc501gkn"]
+[gd_scene load_steps=6 format=3 uid="uid://dmfsnbc501gkn"]
 
 [ext_resource type="Script" path="res://Scripts/pause_ui.gd" id="1_6mbbd"]
+[ext_resource type="Texture2D" uid="uid://butr0nbo3eoya" path="res://Sprites/ui_exit_button1.png" id="2_pbaky"]
+[ext_resource type="Texture2D" uid="uid://bs51cord2b2ak" path="res://Sprites/ui_exit_button2.png" id="3_w5meg"]
+[ext_resource type="Texture2D" uid="uid://b5d10qn7wy7gi" path="res://Sprites/ui_resume_button1.png" id="4_xgue0"]
+[ext_resource type="Texture2D" uid="uid://b4m7h2ptcxrk6" path="res://Sprites/ui_resume_button2.png" id="5_y376r"]
 
 [node name="PauseMenu" type="Control"]
 process_mode = 3
@@ -9,26 +13,31 @@ anchors_preset = 0
 size_flags_vertical = 0
 script = ExtResource("1_6mbbd")
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="QuitButton" type="TextureButton" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 234.0
-offset_top = 467.0
-offset_right = 304.0
-offset_bottom = 533.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -40.0
+offset_right = 80.0
+offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(3.86799, 3.86799)
+texture_normal = ExtResource("2_pbaky")
+texture_hover = ExtResource("3_w5meg")
 
-[node name="QuitButton" type="Button" parent="GridContainer"]
+[node name="ResumeButton" type="TextureButton" parent="QuitButton"]
 layout_mode = 2
-text = "Quit"
+offset_top = 85.0
+offset_right = 160.0
+offset_bottom = 165.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_xgue0")
+texture_hover = ExtResource("5_y376r")
 
-[node name="ResumeButton" type="Button" parent="GridContainer"]
-layout_mode = 2
-text = "Resume"
-
-[connection signal="pressed" from="GridContainer/QuitButton" to="." method="quit_game"]
-[connection signal="pressed" from="GridContainer/ResumeButton" to="." method="resume_game"]
+[connection signal="pressed" from="QuitButton" to="." method="quit_game"]
+[connection signal="pressed" from="QuitButton/ResumeButton" to="." method="resume_game"]
