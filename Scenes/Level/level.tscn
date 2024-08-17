@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dawo2j7pshaw7"]
+[gd_scene load_steps=10 format=3 uid="uid://dawo2j7pshaw7"]
 
 [ext_resource type="Script" path="res://Scripts/level.gd" id="1_kfnmk"]
 [ext_resource type="PackedScene" uid="uid://c2t6pc43xet6t" path="res://Scenes/Character/character.tscn" id="1_ro56v"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://mdxuai4o0prx" path="res://Scenes/UI/score_ui.tscn" id="6_lugbc"]
 [ext_resource type="PackedScene" uid="uid://dipvqvqtrybbg" path="res://Scenes/Trigger/pipe_death_trigger.tscn" id="7_ju8yx"]
 [ext_resource type="PackedScene" uid="uid://dlkbvgh0r3nnt" path="res://Scenes/pipe_spawn_manager/pipe_spawn_manager.tscn" id="8_yqxmc"]
+[ext_resource type="PackedScene" uid="uid://dmfsnbc501gkn" path="res://Scenes/UI/pause_ui.tscn" id="9_jhwd6"]
 [ext_resource type="Texture2D" uid="uid://djbiewvr0q1t4" path="res://Sprites/background.png" id="9_og8ho"]
 
 [node name="Level" type="Node2D"]
@@ -48,3 +49,12 @@ anchor_bottom = 0.0
 offset_left = 360.0
 offset_right = 360.0
 grow_vertical = 1
+
+[node name="PauseMenu" parent="." instance=ExtResource("9_jhwd6")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2

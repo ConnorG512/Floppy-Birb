@@ -13,7 +13,7 @@ size = Vector2(69, 1216)
 script = ExtResource("1_4skdq")
 
 [node name="PipeTop" type="Sprite2D" parent="."]
-position = Vector2(144, 1008)
+position = Vector2(144, 1039)
 texture = ExtResource("2_smeft")
 
 [node name="Collision" parent="PipeTop" instance=ExtResource("3_088mi")]
