@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var movespeed = randi_range(-500, -1300)
+var movespeed = randi_range(-500, -800)
 
 
 

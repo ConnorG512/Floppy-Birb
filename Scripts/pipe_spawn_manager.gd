@@ -11,7 +11,7 @@ func pipe_spawn_rng():
 	var pipe_spawn
 	var pipe_spawn_instance
 	
-	var pipe_spawn_num = randi_range(0,3)
+	var pipe_spawn_num = randi_range(0,5)
 	
 	match pipe_spawn_num:
 		0:
@@ -28,6 +28,18 @@ func pipe_spawn_rng():
 			place_pipe_in_world(pipe_spawn_instance)
 		3:
 			pipe_spawn = preload("res://Scenes/Pipe Spawn/pipe_spawn_4.tscn")
+			pipe_spawn_instance = pipe_spawn.instantiate()
+			place_pipe_in_world(pipe_spawn_instance)
+		4:
+			pipe_spawn = preload("res://Scenes/Pipe Spawn/pipe_spawn_5.tscn")
+			pipe_spawn_instance = pipe_spawn.instantiate()
+			place_pipe_in_world(pipe_spawn_instance)
+		5:
+			pipe_spawn = preload("res://Scenes/Pipe Spawn/pipe_spawn_6.tscn")
+			pipe_spawn_instance = pipe_spawn.instantiate()
+			place_pipe_in_world(pipe_spawn_instance)
+		6:
+			pipe_spawn = preload("res://Scenes/Pipe Spawn/pipe_spawn_7.tscn")
 			pipe_spawn_instance = pipe_spawn.instantiate()
 			place_pipe_in_world(pipe_spawn_instance)
 		_:

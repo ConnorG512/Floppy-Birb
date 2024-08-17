@@ -5,7 +5,7 @@ var CharacterBody = CharacterBody2D
 
 @onready var JumpTimer = $JumpTimer
 
-@export var character_speed = 300 
+@export var character_speed = 375 
 
 var is_dead = false
 var can_jump = true

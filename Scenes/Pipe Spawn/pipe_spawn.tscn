@@ -12,19 +12,20 @@ size = Vector2(69, 1216)
 script = ExtResource("1_ed8s3")
 
 [node name="PipeTop" type="Sprite2D" parent="."]
-position = Vector2(144, 1130)
-scale = Vector2(5.34369, 5.34369)
+position = Vector2(144, 1040)
 texture = ExtResource("1_ljqt8")
 
 [node name="Collision" parent="PipeTop" instance=ExtResource("2_i6bqq")]
+scale = Vector2(-5.47227, 5.00132)
 
 [node name="PipeTop2" type="Sprite2D" parent="."]
-position = Vector2(144, 84.9999)
+position = Vector2(144, 79.9999)
 rotation = -3.14159
-scale = Vector2(5.34369, 5.34369)
 texture = ExtResource("1_ljqt8")
 
-[node name="Collision" parent="PipeTop2" instance=ExtResource("2_i6bqq")]
+[node name="Collision2" parent="PipeTop2" instance=ExtResource("2_i6bqq")]
+position = Vector2(5.09177e-06, -1.00012)
+scale = Vector2(5.47227, -5.00132)
 
 [node name="ScoreTrigger" parent="." instance=ExtResource("3_cdps4")]
 position = Vector2(143, 625)

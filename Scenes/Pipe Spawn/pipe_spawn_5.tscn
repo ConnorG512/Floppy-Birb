@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://cyg77tuu7e6hj"]
+
+[ext_resource type="Script" path="res://Scripts/pipe_spawn.gd" id="1_hkq0f"]
+[ext_resource type="Texture2D" uid="uid://cns1oaqotddcp" path="res://Sprites/pipe_top.png" id="2_imtis"]
+[ext_resource type="Texture2D" uid="uid://6q3725pa0bef" path="res://Sprites/pipe_bottom.png" id="3_x2gj2"]
+[ext_resource type="PackedScene" uid="uid://c3f8ecy2l3ldo" path="res://Scenes/Trigger/DeathTrigger.tscn" id="4_t2bx2"]
+[ext_resource type="PackedScene" uid="uid://bw3mqhc1u4st0" path="res://Scenes/Trigger/ScoreTrigger.tscn" id="5_jh7ft"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l05oi"]
+size = Vector2(69, 1216)
+
+[node name="PipeSpawn" type="CharacterBody2D"]
+script = ExtResource("1_hkq0f")
+
+[node name="PipeTop" type="Sprite2D" parent="."]
+position = Vector2(144, 560)
+rotation = 3.14159
+texture = ExtResource("2_imtis")
+
+[node name="PipeBottom" type="Sprite2D" parent="PipeTop"]
+position = Vector2(0, 160)
+texture = ExtResource("3_x2gj2")
+
+[node name="PipeBottom2" type="Sprite2D" parent="PipeTop"]
+position = Vector2(0, 320)
+texture = ExtResource("3_x2gj2")
+
+[node name="PipeBottom3" type="Sprite2D" parent="PipeTop"]
+position = Vector2(-0.00119019, 480)
+rotation = -3.14159
+texture = ExtResource("3_x2gj2")
+
+[node name="Collision" parent="PipeTop" instance=ExtResource("4_t2bx2")]
+position = Vector2(-0.000615274, 245)
+scale = Vector2(5.32, 20.216)
+
+[node name="PipeTop2" type="Sprite2D" parent="."]
+position = Vector2(144, 1040)
+texture = ExtResource("2_imtis")
+
+[node name="Collision" parent="PipeTop2" instance=ExtResource("4_t2bx2")]
+position = Vector2(1.38016e-06, 14)
+scale = Vector2(5.32, 5.936)
+
+[node name="ScoreTrigger" parent="." instance=ExtResource("5_jh7ft")]
+position = Vector2(143, 625)
+scale = Vector2(4.36, 48.72)
+
+[node name="PipeDeathCollision" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PipeDeathCollision"]
+position = Vector2(260.5, 607)
+shape = SubResource("RectangleShape2D_l05oi")

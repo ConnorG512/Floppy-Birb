@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://2gw66wxlbun"]
+
+[ext_resource type="Script" path="res://Scripts/pipe_spawn.gd" id="1_f22df"]
+[ext_resource type="Texture2D" uid="uid://cns1oaqotddcp" path="res://Sprites/pipe_top.png" id="2_kwuhn"]
+[ext_resource type="Texture2D" uid="uid://6q3725pa0bef" path="res://Sprites/pipe_bottom.png" id="3_2dhh3"]
+[ext_resource type="PackedScene" uid="uid://c3f8ecy2l3ldo" path="res://Scenes/Trigger/DeathTrigger.tscn" id="4_3rbeh"]
+[ext_resource type="PackedScene" uid="uid://bw3mqhc1u4st0" path="res://Scenes/Trigger/ScoreTrigger.tscn" id="5_euqgr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3t1c"]
+size = Vector2(69, 1216)
+
+[node name="PipeSpawn" type="CharacterBody2D"]
+script = ExtResource("1_f22df")
+
+[node name="PipeTop" type="Sprite2D" parent="."]
+position = Vector2(144, 112)
+rotation = -3.14159
+texture = ExtResource("2_kwuhn")
+
+[node name="PipeBottom" type="Sprite2D" parent="PipeTop"]
+position = Vector2(0, 32)
+texture = ExtResource("3_2dhh3")
+
+[node name="Collision" parent="PipeTop" instance=ExtResource("4_3rbeh")]
+position = Vector2(-0.2, 16)
+scale = Vector2(5.28, 5.95201)
+
+[node name="PipeTop2" type="Sprite2D" parent="."]
+position = Vector2(144, 880)
+texture = ExtResource("2_kwuhn")
+
+[node name="PipeBottom2" type="Sprite2D" parent="PipeTop2"]
+position = Vector2(0.000427246, 160)
+rotation = 3.14159
+texture = ExtResource("3_2dhh3")
+
+[node name="Collision2" parent="PipeTop2" instance=ExtResource("4_3rbeh")]
+position = Vector2(0.000209325, 81)
+rotation = 3.14159
+scale = Vector2(5.36, 10.032)
+
+[node name="ScoreTrigger" parent="." instance=ExtResource("5_euqgr")]
+position = Vector2(143, 625)
+scale = Vector2(4.36, 48.72)
+
+[node name="PipeDeathCollision" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PipeDeathCollision"]
+position = Vector2(260.5, 607)
+shape = SubResource("RectangleShape2D_i3t1c")
