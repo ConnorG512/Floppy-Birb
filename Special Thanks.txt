@@ -1,0 +1,10 @@
+Special thanks to:
+
+Klafooty for the 4 value colour pallette used in the creation of the sprites used in the game.
+You can find this pallette here:
+https://lospec.com/palette-list/velvet-cherry-gb
+
+CGBotNet for the font used in the game UI.
+License info: "Creative Commons Zero v1.0 Universal"
+info text is also found in the PublicPixel font folder.
+https://www.fontspace.com/public-pixel-font-f72305
