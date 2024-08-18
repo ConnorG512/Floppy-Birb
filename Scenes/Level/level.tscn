@@ -62,3 +62,5 @@ offset_right = 363.0
 offset_bottom = 530.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[connection signal="player_died" from="Character" to="." method="on_player_death"]

@@ -12,6 +12,8 @@ var is_dead = false
 var can_jump = true
 var current_score = 0
 
+signal player_died
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	SignalEventBus.player_hit_death_trigger.connect(player_die)
@@ -46,6 +48,7 @@ func jump_timer_end():
 
 func player_die():
 	save_score_to_autoload()
+	player_died.emit()
 	queue_free()
 
 func update_score(scoreToAdd):
