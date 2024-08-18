@@ -15,7 +15,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8jueh"]
-radius = 16.0
+radius = 18.468
 
 [node name="Character" type="CharacterBody2D"]
 motion_mode = 1
@@ -26,7 +26,7 @@ scale = Vector2(2.52088, 2.52088)
 sprite_frames = SubResource("SpriteFrames_omxr2")
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
-scale = Vector2(2.49138, 2.49138)
+scale = Vector2(2.42608, 1.62563)
 shape = SubResource("CircleShape2D_8jueh")
 
 [node name="JumpTimer" type="Timer" parent="."]
