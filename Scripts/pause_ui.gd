@@ -4,6 +4,7 @@ extends Control
 func _ready() -> void:
 	hide()
 
+@onready var HighScoreValueText = $"GridContainer/High Score Value"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -23,6 +24,8 @@ func resume_game():
 
 func pause_game():
 	get_tree().paused = true
+	HighScoreValueText.clear()
+	HighScoreValueText.add_text(str(PlayerStats.high_score))
 	show()
 
 func quit_game():
