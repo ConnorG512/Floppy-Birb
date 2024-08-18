@@ -4,6 +4,7 @@ var bAlive = true
 var CharacterBody = CharacterBody2D
 
 @onready var JumpTimer = $JumpTimer
+@onready var AnimatedSprite = $AnimatedSprite2D
 
 @export var character_speed = 375 
 
@@ -36,9 +37,11 @@ func character_movement():
 			velocity.y = -character_speed * 25
 			move_and_slide()
 			JumpTimer.start()
+			AnimatedSprite.play("wing_down")
 			can_jump = false
 
 func jump_timer_end():
+	AnimatedSprite.play("wing_up")
 	can_jump = true
 
 func player_die():

@@ -1,16 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2t6pc43xet6t"]
+[gd_scene load_steps=7 format=3 uid="uid://c2t6pc43xet6t"]
 
 [ext_resource type="Script" path="res://Scripts/character.gd" id="1_ocp2f"]
 [ext_resource type="Texture2D" uid="uid://c4o2tgumi7hsb" path="res://Sprites/Character.png" id="2_7cjin"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbcx1"]
+atlas = ExtResource("2_7cjin")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqjh0"]
+atlas = ExtResource("2_7cjin")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_omxr2"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_7cjin")
+"texture": SubResource("AtlasTexture_kbcx1")
 }],
 "loop": true,
-"name": &"default",
+"name": &"wing_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqjh0")
+}],
+"loop": true,
+"name": &"wing_up",
 "speed": 5.0
 }]
 
@@ -24,6 +40,7 @@ script = ExtResource("1_ocp2f")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2.52088, 2.52088)
 sprite_frames = SubResource("SpriteFrames_omxr2")
+animation = &"wing_up"
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 scale = Vector2(2.42608, 1.62563)
