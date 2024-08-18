@@ -45,9 +45,14 @@ func jump_timer_end():
 	can_jump = true
 
 func player_die():
-	# Immediatly restarts the level
-	get_tree().reload_current_scene()
+	save_score_to_autoload()
+	queue_free()
 
 func update_score(scoreToAdd):
 	current_score += scoreToAdd
 	SignalEventBus.emit_signal("game_score_ui_update", current_score)
+
+func save_score_to_autoload():
+	if PlayerStats.high_score < current_score: 
+		PlayerStats.high_score = current_score
+		print("New highscore saved!")
