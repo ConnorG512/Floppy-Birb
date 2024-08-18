@@ -45,8 +45,8 @@ func jump_timer_end():
 	can_jump = true
 
 func player_die():
-	print("Player Died!")
-	queue_free()
+	# Immediatly restarts the level
+	get_tree().reload_current_scene()
 
 func update_score(scoreToAdd):
 	current_score += scoreToAdd
